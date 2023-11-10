@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+
+     int findmin(int arr[], int n, int min)
+    {
+        if (n == 0)
+        {
+            return min;
+        }
+    
+        if (arr[n - 1] < min)
+        {
+            min = arr[n - 1];
+        }
+    
+        return findmin(arr, n - 1, min);
+    }
+    
+    void main()
+    {
+        int arr[10], i, smallest;
+        clrscr();
+        for (i = 0; i < 10; i++)
+        {
+            printf("Enter Value of %d  : \t", i+1);
+            scanf("%d", &arr[i]);
+        }
+        smallest = findmin(arr, 10, arr[0]);
+        printf("The smallest element in the array is: %d\n", smallest);
+    }
+        
+            
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+    Enter Value of 1  :      58
+    Enter Value of 2  :      -39
+    Enter Value of 3  :      587
+    Enter Value of 4  :      458
+    Enter Value of 5  :      -658
+    Enter Value of 6  :      55
+    Enter Value of 7  :      58
+    Enter Value of 8  :      35
+    Enter Value of 9  :      57
+    Enter Value of 10  :     -68
+    
+    The smallest element in the array is: -658 
+
+     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

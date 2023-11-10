@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+
+     int findMax(int arr[], int n, int max)
+    {
+        if (n == 0)
+        {
+            return max;
+        }
+    
+        if (arr[n - 1] > max)
+        {
+            max = arr[n - 1];
+        }
+    
+        return findMax(arr, n - 1, max);
+    }
+    
+    void main()
+    {
+        int arr[10], i;
+        clrscr();
+        for (i = 0; i < 10; i++)
+        {
+            printf("Enter Value of %d : \t", i+1);
+            scanf("%d", &arr[i]);
+        }
+        int largest = findMax(arr, 10, arr[0]);
+        printf("The largest element in the array is: %d\n", largest);
+    }
+        
+
+            
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+     Enter Value of 1  :      25
+     Enter Value of 2  :      35
+     Enter Value of 3  :      102
+     Enter Value of 4  :      58
+     Enter Value of 5  :      5989
+     Enter Value of 6  :      58
+     Enter Value of 7  :      58
+     Enter Value of 8  :      48
+     Enter Value of 9  :      58
+     Enter Value of 10  :     38
+     
+     The largest element in the array is: 5989
+
+     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

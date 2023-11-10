@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+
+     int charDifference(char str1, char str2){
+          return (str1 - str2);
+      }
+      void main(){
+          char str[30], str2[30];
+          int i;
+          clrscr();
+          printf("Enter a String\n");
+          gets(str);
+          printf("Enter a another String\n");
+          gets(str2);
+          for (i = 0; str[i] && str2[i]; i++)
+          {
+              printf("%c - %c = %d\n", str[i], str2[i], charDifference(str[i], str2[i]));
+          }
+      }
+          
+            
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+     Enter a String
+     Hello    
+
+     Enter a another String                                                          
+     HellO       
+                                                                         
+     H - H = 0                                                                       
+     e - e = 0                                                                       
+     l - l = 0                                                                       
+     l - l = 0                                                                       
+     o - O = 32
+
+     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

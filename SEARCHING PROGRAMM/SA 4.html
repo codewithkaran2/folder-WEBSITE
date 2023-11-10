@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+
+     int linearSearch(char str[], char key) {
+          int i;
+          for (i = 0; str[i]; i++) {
+              if (str[i] == key) {
+              return i;
+              }
+          }
+          return -1; 
+      }
+      
+      void main() {
+          char str[20], key;
+          int result;
+          clrscr();
+          printf("Enter any String\n");
+          gets(str);
+      
+          printf("Enter charater to be searched\n");
+          scanf("%c", &key);
+      
+          result = linearSearch(str, key);
+      
+          if (result == -1) {
+              printf("Element %c not found in the array.\n", key);
+          } else {
+              printf("Element %c found at  %d.\n", key, result+1);
+          }
+      }
+            
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+     Enter any String
+     Morning 
+
+     Enter charater to be searched
+     i
+
+     Element a found at  5
+
+     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

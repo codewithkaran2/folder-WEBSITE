@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+
+     int linearSearch(int arr[], int key, int lower, int n) {
+          if (lower == n)
+              return -1;
+          
+          if (arr[lower] == key)
+              return lower;
+      
+          return linearSearch(arr, key, lower+1, n);
+      }
+      void main(){
+          int arr[10], i, key, result;
+          clrscr();
+          for (i = 0; i < 10; i++)
+          {
+              printf("Enter Value of  %d\n", i+1);
+              scanf("%d", &arr[i]);
+          }
+      
+          printf("Enter Value to be searched\n");
+          scanf("%d", &key);
+          result = linearSearch(arr, key, 0, 10);
+      
+          if (result == -1) {
+              printf("Element %d not found in the array.\n", key);
+          } else {
+              printf("Element %d found at  %d.\n", key, result+1);
+          }    
+      }
+            
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+     Enter Value of  1
+     56
+     Enter Value of  2
+     35
+     Enter Value of  3
+     589
+     Enter Value of  4
+     658
+     Enter Value of  5
+     35
+     Enter Value of  6
+     59
+     Enter Value of  7
+     86
+     Enter Value of  8
+     36
+     Enter Value of  9
+     36
+     Enter Value of  10
+     366
+     Enter Value to be searched
+     65
+
+     Element 65 not found in the array
+
+     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+     #include&#60;string.h&#62;
+
+     int binarySearch(char arr[], int n, char key) {
+          int l = 0, u = n-1;
+          while(l <= u)
+          {
+              int mid = l + (u - l) / 2;
+              if (arr[mid] == key)
+              {
+                  return mid;
+              }
+              else if(arr[mid] > key){
+                  u = mid-1;
+              }
+              else {
+                  l = mid+1;
+              }
+          }
+          return -1; 
+      }
+      
+      void main() {
+          char arr[20], key;
+          int result;
+          clrscr();
+          printf("Enter any String\n");
+          gets(arr);
+      
+          printf("Enter Character to be searched\n");
+          scanf("%c", &key);
+          result = binarySearch(arr, strlen(arr), key);
+      
+          if (result == -1) {
+              printf("Element %c not found in the array.\n", key);
+          } else {
+              printf("Element %c found at position %d.\n", key, result+1);
+          }
+      }
+     
+
+            
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+     Enter any String
+     structure
+
+     Enter Character to be searched
+     e 
+
+     Element e found at position 9  
+
+     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

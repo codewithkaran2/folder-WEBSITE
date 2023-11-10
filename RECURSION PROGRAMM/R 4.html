@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+
+     void printBinary(int num)
+    {
+        if (num == 0)
+            return;
+        
+        printBinary(num/2);
+        printf("%d", num%2);
+    }
+    
+    void main()
+    {
+        int num;
+        clrscr();
+        printf("Enter Decimal Number: \n");
+        scanf("%d", &num);
+    
+        if (num < 0) {
+            printf("Please enter a non-negative integer.\n");
+            return 0;
+        }
+        printf("Binary for %d is ", num);
+        printBinary(num);
+    }
+        
+            
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+    Enter Decimal Number: 
+    10
+    
+    Binary for 10 is 1010
+
+     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

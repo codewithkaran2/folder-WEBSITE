@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+
+     void nextSmaller(int arr[]){
+          int i, j;
+          for (i = 0; i < 5; i++)
+          {
+              for (j = i+1; j < 5; j++)
+              {
+                  if (arr[i] > arr[j])
+                  {
+                      printf("%d -----> %d\n", arr[i], arr[j]);
+                      break;
+                  }
+              }
+              if (j == 5 || i == 4)
+              {
+                  printf("%d -----> -1\n", arr[i]);
+              }
+          }
+      }
+      
+      void main(){
+          int i, arr[5];
+          clrscr();
+          for (i = 0; i < 5; i++)
+          {
+              printf("Enter Value at  %d:\t", i+1);
+              scanf("%d", &arr[i]);
+          }
+          
+          nextSmaller(arr);
+      }
+
+            
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+    Enter Value at  1:      4
+    Enter Value at  2:      8
+    Enter Value at  3:      5
+    Enter Value at  4:      2
+    Enter Value at  5:      25
+    4 -----> 2
+    8 -----> 5
+    5 -----> 2
+    2 -----> -1
+    25 -----> -1
+
+     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

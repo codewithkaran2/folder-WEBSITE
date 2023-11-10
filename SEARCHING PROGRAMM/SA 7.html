@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+
+     int binarySearch(int arr[], int l, int u, int key) {
+          int mid = l+(u - l)/2;
+          if (l > u)
+          {
+          return -1;
+          }
+          if (arr[mid] == key)
+          {
+          return mid;
+          }
+          else if (arr[mid] > key){
+          u = mid-1;
+          }
+          else{
+          l = mid+1;
+          }
+      
+          return binarySearch(arr, l, u, key);
+      }
+      
+      void main() {
+          int arr[10], i, key, result;
+          clrscr();
+          for (i = 0; i < 10; i++)
+          {
+          printf("Enter Value of  %d\n", i+1);
+          scanf("%d", &arr[i]);
+          }
+      
+          printf("Enter Value to be searched\n");
+          scanf("%d", &key);
+          result = binarySearch(arr, 0, 10, key);
+      
+          if (result == -1) {
+          printf("Element %d not found in the array.\n", key);
+          } else {
+          printf("Element %d found at  %d.\n", key, result+1);
+          }
+      }
+            
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+     Enter Value of  1
+     2 
+     Enter Value of  2
+     9
+     Enter Value of  3
+     18
+     Enter Value of  4
+     24
+     Enter Value of  5
+     26
+     Enter Value of  6
+     34
+     Enter Value of  7
+     56
+     Enter Value of  8
+     78
+     Enter Value of  9
+     96
+     Enter Value of  10
+     103
+     
+     Enter Value to be searched
+     34
+
+     Element 34 found at  6    
+
+     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>
